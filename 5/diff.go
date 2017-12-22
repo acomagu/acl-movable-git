@@ -70,6 +70,7 @@ func (dp DP) distance(i, j int) []Op {
 	}
 }
 
+// minD は引数の中から最も小さい編集距離を持つ []Op を返します。
 func minD(opLists ...[]Op) []Op {
 	md := math.MaxInt32
 	var ans []Op
@@ -85,6 +86,7 @@ func minD(opLists ...[]Op) []Op {
 	return ans
 }
 
+// d は []Op の編集距離を返します。
 func d(ops []Op) int {
 	res := 0
 	for _, op := range ops {
